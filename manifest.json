@@ -1,0 +1,26 @@
+{
+  "name": "RTT smartUp",
+  "description": "RTT okosító plugin",
+  "version": "0.1",
+  "manifest_version": 2,
+  "author": "Varga Márk",
+  "permissions": ["declarativeContent", "storage"],
+  "background": {
+    "scripts": ["script.js"],
+    "persistent": false
+  },
+  "options_page": "options.html",
+  "page_action": {
+    "default_popup": "window.html",
+    "default_icon": {
+      "16": "RTT_logo_16.png",
+      "32": "RTT_logo_32.png",
+      "64": "RTT_logo_64.png"
+    }
+  },
+  "icons": {
+    "16": "RTT_logo_16.png",
+    "32": "RTT_logo_32.png",
+    "64": "RTT_logo_64.png"
+  }
+}
