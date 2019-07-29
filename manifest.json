@@ -7,27 +7,27 @@
   "permissions": ["declarativeContent", "storage"],
   "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
   "background": {
-    "scripts": ["background.js"],
+    "scripts": ["/js/background.js"],
     "persistent": false
   },
   "content_scripts": [
     {
       "matches": ["http://rtt.dolphio.hu/*"],
-      "js": ["jquery-3.4.1.min.js", "script.js"]
+      "js": ["/js/jquery-3.4.1.min.js", "/js/script.js"]
     }
   ],
-  "options_page": "options.html",
+  "options_page": "/pages/options.html",
   "page_action": {
-    "default_popup": "window.html",
+    "default_popup": "/pages/window.html",
     "default_icon": {
-      "16": "RTT_logo_16.png",
-      "32": "RTT_logo_32.png",
-      "64": "RTT_logo_64.png"
+      "16": "/images/RTT_logo_16.png",
+      "32": "/images/RTT_logo_32.png",
+      "64": "/images/RTT_logo_64.png"
     }
   },
   "icons": {
-    "16": "RTT_logo_16.png",
-    "32": "RTT_logo_32.png",
-    "64": "RTT_logo_64.png"
+    "16": "/images/RTT_logo_16.png",
+    "32": "/images/RTT_logo_32.png",
+    "64": "/images/RTT_logo_64.png"
   }
 }
