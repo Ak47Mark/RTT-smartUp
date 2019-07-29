@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        button {
-            height: 30px;
-            width: 30px;
-            outline: none;
-            margin: 10px;
-        }
-    </style>
+    <meta charset="ISO-8859-1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-<div class="mdc-layout-grid">
-    <div class="mdc-layout-grid__inner">
-        <div class="mdc-layout-grid__cell">a</div>
-        <div class="mdc-layout-grid__cell">
-
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="/RTT_logo_32.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        RTT smartUp
+    </a>
+</nav>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                <label for="workHour">Napi munkaórák száma</label>
+                <input type="number" class="form-control" id="workHour">
+            </div>
         </div>
-        <div class="mdc-layout-grid__cell">c</div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center mt-3">
+            <button type="button" id="save" class="btn btn-primary">Mentés</button>
+        </div>
     </div>
 </div>
-<div id="buttonDiv">
-</div>
-<div>
-    <p>Choose a different background color!</p>
-</div>
 </body>
+<script src="jquery-3.4.1.min.js"></script>
 <script src="options.js"></script>
 </html>

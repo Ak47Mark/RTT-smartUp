@@ -5,10 +5,17 @@
   "manifest_version": 2,
   "author": "Varga Márk",
   "permissions": ["declarativeContent", "storage"],
+  "content_security_policy": "script-src 'self' https://ajax.googleapis.com; object-src 'self'",
   "background": {
-    "scripts": ["script.js"],
+    "scripts": ["background.js"],
     "persistent": false
   },
+  "content_scripts": [
+    {
+      "matches": ["http://rtt.dolphio.hu/*"],
+      "js": ["jquery-3.4.1.min.js", "script.js"]
+    }
+  ],
   "options_page": "options.html",
   "page_action": {
     "default_popup": "window.html",
