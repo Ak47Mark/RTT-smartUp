@@ -11,12 +11,10 @@ $(document).ready(function () {
     var lastDay = new Date(date.getYear(), date.getMonth() + 1, 0);
     var firstDay = new Date(date.getYear(), date.getMonth(), 1);
     $('#tracking').append('<br><span id="backtime"><span>');
-    $("#favorites").after('<div id="customTime" ng-controller="FavoritesCtrl" class="ng-scope" style="display: none; position: fixed; left: 0; top: 135px; background-color: white; min-width: 115px; min-height: 32px; border: 1px solid #ccc; margin-top: 3px; border-bottom-right-radius: 4px; padding: 5px; box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);"><p style="font-weight: 600">Munkaórák</p><p id="customWeek">Heti: <span></span></p><p id="customMonth">Havi: <span></span></p></div>');
-    setTimeout(function () {
-        $('#customTime').css('top', 152 + $("#favorites").height());
-        $('#customTime').css('display', 'block');
-    }, 1000);
+    $("#favorites").after('<div id="customTime" ng-controller="FavoritesCtrl" class="ng-scope" style="position: fixed; left: 0; top: 135px; background-color: white; min-width: 115px; min-height: 32px; border: 1px solid #ccc; margin-top: 3px; border-bottom-right-radius: 4px; padding: 5px; box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2); -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2); -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);"><p style="font-weight: 600">Munkaórák</p><p id="customWeek">Heti: <span></span></p><p id="customMonth">Havi: <span></span></p></div>');
+
     setInterval(function () {
+        $('#customTime').css('top', 152 + $("#favorites").height());
         var week = date.getDay() * workHour;
         weekH = Math.floor(week);
         weekM = (week % 1) * 60;
