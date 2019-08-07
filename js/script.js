@@ -1,5 +1,6 @@
 $(document).ready(function () {
-    var workHour = 7.5;
+    var ewd = [-1,0,-1,-2,-1,-1,0,1,0,-1,-1,2];
+    var workHour = 0;
     var key = "workHour";
     chrome.storage.local.get(['key'], function (result) {
         back = result.key;
@@ -14,8 +15,8 @@ $(document).ready(function () {
 
     function monthWokdays(){
         var days = 0;
-        for(var i = 1; i == date.getDate(); i++ ){
-            if(new Date(date.getYear(), date.getMonth(), i).getDay() < 6){
+        for(var i = 0; i <= date.getDate(); i++ ){
+            if(parseInt(new Date(date.getYear(), date.getMonth() - 1, i).getDay()) < 5){
                 days++
             }
         }
@@ -35,7 +36,6 @@ $(document).ready(function () {
         $('#customWeek span').text(weekH + ":" + weekM);
         $('#customMonth span').text(monthH + ":" + monthM);
         var trackTime = $('#tracking')[0].textContent.split(' ')[9].split(':');
-        console.log(parseInt(trackTime[0])+(parseInt(trackTime[1])/60));
         if(parseInt(trackTime[0])+(parseInt(trackTime[1])/60) < workHour) {
             var backTime = (60 * workHour) - (parseInt(trackTime[0]) * 60 + parseInt(trackTime[1]));
             var backTimeHour = Math.floor(backTime / 60);
