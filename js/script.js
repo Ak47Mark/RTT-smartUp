@@ -16,7 +16,7 @@ $(document).ready(function () {
     function monthWokdays(){
         var days = 0;
         for(var i = 0; i <= date.getDate(); i++ ){
-            if(parseInt(new Date(date.getYear(), date.getMonth() + 1, i).getDay()) < 5){
+            if(parseInt(new Date(date.getFullYear(), date.getMonth() + 1, i).getDay()) < 5){
                 days++
             }
         }
