@@ -1,7 +1,7 @@
 {
   "name": "RTT smartUp",
   "description": "RTT okosító plugin",
-  "version": "0.3",
+  "version": "1",
   "manifest_version": 2,
   "author": "Varga Márk",
   "permissions": ["declarativeContent", "storage"],
